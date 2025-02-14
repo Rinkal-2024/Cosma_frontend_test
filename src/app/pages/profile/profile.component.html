@@ -1,0 +1,22 @@
+<div class="profile-page">
+  <div class="profile-container">
+    <kendo-card>
+      <kendo-card-header>
+        <div class="profile-header">
+          <div class="profile-info">
+            <h2>{{ user.firstName | titlecase }} {{ user.lastName | titlecase }}</h2>
+            <p>{{ user.accountType | titlecase }}</p>
+          </div>
+        </div>
+      </kendo-card-header>
+
+      <kendo-card-body>
+        <div class="user-details">
+          <p><strong>{{ 'EMAIL' | translate }}:</strong> {{ user.username }}</p>
+          <p><strong>{{ 'FIRST_NAME' | translate }}:</strong> {{ user.firstName | titlecase }}</p>
+          <p><strong>{{ 'LAST_NAME' | translate }}:</strong> {{ user.lastName | titlecase }}</p>
+        </div>
+      </kendo-card-body>
+    </kendo-card>
+  </div>
+</div>

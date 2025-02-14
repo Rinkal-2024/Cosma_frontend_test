@@ -1,0 +1,40 @@
+<div class="header-container">
+  <div class="header-center">
+    <kendo-breadcrumb [items]="items1"> </kendo-breadcrumb>
+    <div class="header-right">
+      <div class="language-block">
+        <div class="k-form-field-wrap">
+          <kendo-combobox
+            [data]="listItems"
+            [(value)]="selectedLanguage"
+            placeholder="Select Language"
+            (valueChange)="onLanguageChange($event)"
+          ></kendo-combobox>
+        </div>
+      </div>
+      <div class="question-block">
+        <button  kendoButton [svgIcon]="svgQuestionCircleIcon" themeColor="base" class="question-button k-rounded-full"> </button>
+      </div>
+      <div class="setting-block">
+        <button  kendoButton [svgIcon]="svgGear" themeColor="base" class="setting-button k-rounded-full" (click)="onSetting()"> </button>
+      </div>
+      <div class="user-info">
+        <!-- Kendo Avatar with an Icon -->
+       @if(user){
+        <div class="user-details">
+          <div class="user-name">{{ user.firstName | titlecase }} {{ user.lastName |titlecase}}</div>
+          <div class="user-role">{{ user.accountType }}</div>
+        </div>
+       }
+        <kendo-dropdownbutton
+          [data]="profileData"
+          [ngClass]="{'user-button': true}"
+          [popupSettings]="{ popupClass: 'profile-popup', align:  'right' }"
+          (itemClick)="onItemSelect($event)"
+        >
+          <kendo-avatar [svgIcon]="user1.SVGIcon1" shape="circle" size="large"></kendo-avatar>
+        </kendo-dropdownbutton>
+      </div>
+    </div>
+  </div>
+</div>

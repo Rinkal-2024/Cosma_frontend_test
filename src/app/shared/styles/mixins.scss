@@ -1,0 +1,4 @@
+@mixin responsive-height {
+  height: calc(100vh); // fallback
+  height: calc(100svh); // if  supported by browser
+}

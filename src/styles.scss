@@ -1,0 +1,373 @@
+//@use "@progress/kendo-theme-default/scss/all.scss";
+
+@import "@progress/kendo-theme-default/scss/all";
+//@import "@progress/kendo-theme-default/scss/mixins";
+
+@import "./app/ui/styles/styles";
+@import "./app/shared/styles/mixins";
+@import "./app/shared/styles/styles";
+
+:root {
+  --kendo-font-family: "Roboto", Arial, sans-serif; 
+  --kendo-spacing5: 20px;
+  --kendo-color-on-app-surface-1 :#9E9E9E;
+}
+
+body {
+  font-family: var(--kendo-font-family); 
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; // iOS
+}
+label { 
+	display: block;
+	margin-bottom: 0px;
+  font-weight: var(--kendo-font-weight-normal);
+  font-size: var(--kendo-font-size-md);
+  line-height: 20px;
+  color: var(--kendo-color-on-app-surface);
+}
+
+.k-drawer-wrapper { 
+	height: calc(100% - 59px);
+}
+.k-drawer-expanded .k-drawer {
+  flex-basis: 280px !important;
+}
+.k-drawer-expanded .k-drawer .k-drawer-wrapper {
+  width: 280px !important;
+}
+.k-drawer-mini .k-drawer {
+  flex-basis: 90px !important;
+}
+.k-drawer-mini .k-drawer .k-drawer-wrapper {
+  width: 90px !important;
+}
+.k-drawer-mini .cosma-block,
+.k-drawer-mini .collapse-text,
+.k-drawer-mini .k-svg-i-unlock,
+.k-drawer-expanded .k-svg-i-lock,
+.k-drawer-mini .drawer-banner-image,
+.k-drawer-mini .i-hasb-wrapper {
+  display: none;
+}
+.k-drawer-mini .k-svg-i-lock {
+  display: block;
+}
+
+.sidebar-change-button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  z-index: 1;
+}
+.last-updated-text {
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  top: auto;
+  bottom: 10px;
+  z-index: 1;
+  width: 100%;
+  padding: 0px 10px;
+  text-align: center;
+  color: #ffffff;
+}
+.i-hasb-click {
+  color: #fff;
+  padding: 0px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.i-hasb-wrapper {
+  padding: 0px 20px 20px 20px;
+}
+.i-hasb-wrapper .i-hasb-click .k-h5 {
+  margin: 0px;
+}
+.i-hasb-wrapper .hasb-content {
+  padding: 0px 0px 0px 0px;
+}
+.i-hasb-wrapper .hasb-content p {
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+  color: #fff;
+}
+.k-grid-container {
+  display: flex;  
+  flex-wrap: wrap; /* Space between items */
+  align-items: center;
+  margin-top: 7px;  /* Horizontally center items */
+}
+.k-item {
+  color: #fff;
+  width: 100%;
+  max-width: calc(50% - 6px);
+  display: flex;  
+  column-gap: 10px;
+}
+.block-heading {
+  width: 100%;
+  display: block;
+  color: #fff;
+}
+.main-right-content {
+  width: 100%;
+}
+.main-container {
+  padding: 20px;
+}
+.main-layout {
+  margin: 0px;
+  padding: 0px;
+}
+.k-drawer-container.k-drawer-push .k-drawer {
+  position: sticky;
+  top: 0px;
+  height: calc(100vh - 40px);
+  background-color: var(--kendo-color-primary);
+  margin: 0px 20px 0px 0px;
+  border: 0px;
+  border-radius: 16px; 
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+.drawer-header {
+  display: flex;
+  column-gap: 4px;
+  padding: 20px;
+}
+.drawer-header .logo {
+  min-width: 50px;
+}
+.drawer-banner-image {
+  position: relative;
+  margin: 0px 0px 20px 0px;
+}
+.drawer-banner-image::after {
+  content: ""; 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  // background: linear-gradient(180deg, #FFFFFF 49%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient( 180deg, rgba(255, 99, 88, 0) 50%, rgb(255, 99, 88) 100%);
+}
+.drawer-header .cosma-block .k-h4 {
+  color: #ffffff;
+  font-family: var(--kendo-font-family); 
+  margin: 0px;
+}
+.drawer-header .cosma-block .cma-text {
+  color: #fff;
+}
+.k-drawer-items {
+  padding: 0px 20px; 
+}
+.k-drawer-items .k-drawer-item {
+  color: #ffffff;
+  background-color: transparent;
+  padding: 8px 16px;
+  border: 0px !important;
+  box-shadow: none !important;
+}
+.k-drawer-items .k-drawer-item.k-level-1 {
+  padding: 8px 16px 8px 32px;
+}
+.k-drawer-items .k-drawer-item:hover,
+.k-drawer-items .k-drawer-item:hover.k-selected,
+.k-drawer-items .k-drawer-item.k-selected {
+  background-color: rgba(61, 61, 61, 0.11);
+  color: #fff;
+}
+.k-drawer-items .k-drawer-item.k-drawer-separator {
+  padding: 0px !important;
+  background-color: #ffffff !important;
+  height: 1px;
+  margin: 20px 0px 20px 0px !important;
+}
+.drawer-footer {
+  padding: 0px;
+  border-top: 1px solid #ffffff;
+  padding: 13px 16px 13px 32px;
+  color: #ffffff;
+  position: absolute;
+  top: auto;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+.drawer-footer .k-button {
+  background-color: transparent !important;
+  border: 0px !important;
+  outline: none !important;
+  box-shadow: none !important;
+  height: auto !important;
+  line-height: 24px;
+  padding: 0px;
+}
+.drawer-footer .k-button .k-button-text {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.drawer-footer .k-button::before,
+.drawer-footer .k-button::after {
+  display: none !important;
+}
+
+div[kendowatermarkoverlay=""] {
+  background-image: none !important;
+}
+
+.profile-popup .k-menu-group, 
+.profile-popup .k-menu.k-context-menu {
+	color: var(--kendo-color-on-app-surface, #3d3d3d);
+}
+.profile-popup .k-menu-group-md, 
+.profile-popup .k-menu-group-md .k-menu-item {
+	font-size: var(--kendo-font-size, inherit);
+	line-height: var(--kendo-line-height, normal);
+}
+.profile-popup .k-item {
+	color: var(--kendo-color-on-app-surface, #3d3d3d);
+  font-size: var(--kendo-font-size, inherit);
+	line-height: var(--kendo-line-height, normal);
+	width: 100%;
+	max-width: 100%; 
+	column-gap: 0px;
+  box-shadow: none !important;
+}
+.profile-popup .k-item .k-link.k-menu-link {
+  box-shadow: none !important;
+}
+
+.k-drawer-wrapper {
+	scrollbar-color: rgba(156, 156, 156, 0) #dedede;
+}
+.k-drawer-wrapper:hover {
+	scrollbar-color: rgba(156, 156, 156, 0.7) #dedede;
+}
+
+/* Make scrollbar visible when the drawer is hovered */
+.k-drawer-wrapper:hover {
+  scrollbar-width: thin; /* Firefox */
+}
+
+/* For Webkit browsers (Chrome, Safari, Edge) */
+.k-drawer-wrapper::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa;
+  transition: all 300ms ease-in-out;
+}
+
+.k-drawer-wrapper::-webkit-scrollbar-thumb {
+  scrollbar-color: rgba(156, 156, 156, 0.7) #dedede;
+  border-radius: 4px;
+}
+
+.k-drawer-wrapper::-webkit-scrollbar-thumb:hover {
+  scrollbar-color: rgba(156, 156, 156, 0.7) #dedede;
+}
+
+/* Optional: Hide the scrollbar by default on Webkit browsers */
+.k-drawer-wrapper {
+  scrollbar-width: none; /* Firefox */
+}
+
+.k-drawer-wrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar by default */
+}
+
+// Filter Module css
+
+.filter-module {
+  padding: var(--kendo-spacing5);
+  // justify-content: space-between;
+  background-color: var(--kendo-color-surface);
+  border: 1px solid var(--kendo-color-border);
+  margin: 24px 0px 0px 0px;
+}
+.filter-module-inner {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.filter-module .filter-search-block span {
+  color: var(--kendo-color-subtle);
+}
+.filter-module .filter-search-block .k-svg-i-x {
+  color: var(--kendo-color-on-app-surface-1);
+}
+.filter-date-range-block {
+  display: flex;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.filter-search-block {
+  width: 100%;
+  max-width: 250px;
+}
+.status-block,
+.columns-filter-block,
+.type-filter-block {
+  width: 100%;
+  max-width: 193px;
+}
+.columns-filter-block .k-input-value-text {
+  display: flex;
+  justify-content: space-between;
+}
+.columns-filter-block .k-input-value-text::before {
+  display: none;
+}
+.columns-filter-block .k-input-value-text::after,
+.status-block .k-button::after,
+.type-filter-block .k-input-button::after {
+  content: "▼";
+  display: flex;
+  position: static;
+  opacity: 1;
+}
+.status-block .k-button,
+.type-filter-block .k-input-button {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border: 0px !important;
+}
+.status-block .k-button .k-button-text,
+.type-filter-block .k-input-button kendo-icon-wrapper {
+  display: none;
+}
+.filter-button-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0px 0px 0px;
+  gap: 10px;
+}
+.pdf-excel-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

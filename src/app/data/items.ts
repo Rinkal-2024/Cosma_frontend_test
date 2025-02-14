@@ -1,0 +1,111 @@
+import {
+    documentManagerIcon,
+    homeIcon,
+    eyeIcon,
+    plusIcon,
+    wrenchIcon,
+    cloudIcon,
+    clockArrowRotateIcon,
+    dataIcon,
+    folderMoreIcon,
+  } from "@progress/kendo-svg-icons";
+
+  export const items = [
+    {
+      text: "DASHBOARD",
+      icon: "k-i-home",
+      svgIcon: homeIcon,
+      selected: true,
+      id: 0,
+      navigateTo: '/dashboard'
+    },
+    {
+      text: "TECHNICAL_BULLETINS",
+      icon: "k-i-document-manager",
+      svgIcon: documentManagerIcon,
+      id: 1,
+    },
+    {
+      text: "Add",
+      icon: "k-i-plus",
+      svgIcon: plusIcon,
+      id: 101,
+      parentId: 1,
+    },
+    {
+      text: "Storico valutazioni",
+      icon: "k-i-plus",
+      svgIcon: plusIcon,
+      id: 102,
+      parentId: 1,
+    },
+    {
+      text: "Components",
+      icon: "k-i-wrench",
+      svgIcon: wrenchIcon,
+      id: 2,
+    },
+    {
+      text: "Aggiungi",
+      icon: "k-i-plus",
+      svgIcon: plusIcon,
+      id: 201,
+      parentId: 2,
+    },
+    {
+      text: "Storico",
+      icon: "k-i-plus",
+      svgIcon: plusIcon,
+      id: 202,
+      parentId: 2,
+    },
+    {
+      text: "Inspections",
+      icon: "k-i-eye",
+      svgIcon: eyeIcon,
+      id: 3,
+    },
+    {
+      text: "History",
+      icon: "k-i-cloud",
+      svgIcon: cloudIcon,
+      id: 301,
+      parentId: 3,
+    },
+    {
+      text: "Deadlines",
+      icon: "k-i-clock-arrow-rotate",
+      svgIcon: clockArrowRotateIcon,
+      id: 4,
+    },
+    {
+      separator: true,
+    },
+    {
+      text: "Database",
+      icon: "k-i-data",
+      svgIcon: dataIcon,
+      id: 5,
+    },
+    {
+      text: "Components list",
+      icon: "k-i-folder-more",
+      svgIcon: folderMoreIcon,
+      id: 501,
+      parentId: 5,
+    },
+    {
+      text: "Inspection types",
+      icon: "k-i-eye",
+      svgIcon: eyeIcon,
+      id: 502,
+      parentId: 5,
+    },
+    {
+      text: "Deadline types",
+      icon: "k-i-clock-arrow-rotate",
+      svgIcon: clockArrowRotateIcon,
+      id: 503,
+      parentId: 5,
+    },
+  ];

@@ -1,0 +1,113 @@
+<div class="main-layout">
+
+  <kendo-drawer-container>
+    <kendo-drawer #drawer [items]="items" mode="push" [mini]="true" [expanded]="true" (select)="onSelect($event)"
+      [autoCollapse]="false" [isItemExpanded]="isItemExpanded">
+      <ng-template kendoDrawerHeaderTemplate>
+        <div class="drawer-header">
+          <div class="logo"><img src="/images/propellers_logo.png" alt="App Logo" class="drawer-logo" /></div>
+          <div class="cosma-block">
+            <div kendoTypography variant="h4">COSMA</div>
+            <span class="cma-text">{{ 'COMPONENTS_MANAGEMENT' | translate }}</span>
+          </div>
+
+        </div>
+        <div class="drawer-banner-image">
+          <img src="/images/heli.png" alt="App Logo" class="drawer-banner" />
+          <button class="sidebar-change-button" kendoButton [size]="sizeMedium" [rounded]="roundedMedium"
+            [fillMode]="fillModeSolid" [themeColor]="themePrimaryColor">
+            {{ 'CHANGE' | translate }}
+          </button>
+          <div kendoTypography fontWeight="normal" fontSize="sm" class="last-updated-text">
+            {{ 'LAST_UPDATE' | translate }}: 12/94/2023
+          </div>
+        </div>
+        <div class="i-hasb-wrapper">
+          <div class="i-hasb-click" (click)="toggleContent()" (keydown)="onKeydown($event)" tabindex="0">
+            <div kendoTypography variant="h5">I-HASB </div>
+            <kendo-svg-icon [icon]="isOpen ? chevronUpSvg : chevronDownSvg"></kendo-svg-icon>
+          </div>
+          @if (isOpen) {
+          <div class="hasb-content">
+            <div class="k-widget k-grid-container">
+              <div class="k-item">
+                <span kendoTypography fontWeight="bold" fontSize="md">S/N:</span>
+                <span kendoTypography fontWeight="normal" fontSize="md">4782</span>
+              </div>
+              <div class="k-item">
+                <span kendoTypography fontWeight="bold" fontSize="md">S/N:</span>
+                <span kendoTypography fontWeight="normal" fontSize="md">4782</span>
+              </div>
+              <div class="k-item">
+                <span kendoTypography fontWeight="bold" fontSize="md">Tipo:</span>
+                <span kendoTypography fontWeight="normal" fontSize="md">ASS8309</span>
+              </div>
+              <div class="k-item">
+                <span kendoTypography fontWeight="bold" fontSize="md">Tipo:</span>
+                <span kendoTypography fontWeight="normal" fontSize="md">ASS8309</span>
+              </div>
+            </div>
+            <div class="k-widget k-grid-container">
+              <span kendoTypography fontWeight="bold" fontSize="md" class="block-heading">TOTAL HOURS</span>
+              <div class="k-item">
+                <span kendoTypography fontWeight="bold" fontSize="md">A/M-H:</span>
+                <span kendoTypography fontWeight="normal" fontSize="md">4923.92</span>
+              </div>
+              <div class="k-item">
+                <span kendoTypography fontWeight="bold" fontSize="md">APU-H:</span>
+                <span kendoTypography fontWeight="normal" fontSize="md">0</span>
+              </div>
+              <div class="k-item">
+                <span kendoTypography fontWeight="bold" fontSize="md">M1-H:</span>
+                <span kendoTypography fontWeight="normal" fontSize="md">2145.4</span>
+              </div>
+              <div class="k-item">
+                <span kendoTypography fontWeight="bold" fontSize="md">M2-H</span>
+                <span kendoTypography fontWeight="normal" fontSize="md">1295.5</span>
+              </div>
+            </div>
+            <div class="k-widget k-grid-container">
+              <span kendoTypography fontWeight="bold" fontSize="md" class="block-heading">TOTAL CYCLES</span>
+              <div class="k-item">
+                <span kendoTypography fontWeight="bold" fontSize="md">A/M-H:</span>
+                <span kendoTypography fontWeight="normal" fontSize="md">4923.92</span>
+              </div>
+              <div class="k-item">
+                <span kendoTypography fontWeight="bold" fontSize="md">APU-H:</span>
+                <span kendoTypography fontWeight="normal" fontSize="md">0</span>
+              </div>
+              <div class="k-item">
+                <span kendoTypography fontWeight="bold" fontSize="md">M1-NG:</span>
+                <span kendoTypography fontWeight="normal" fontSize="md">13958</span>
+              </div>
+              <div class="k-item">
+                <span kendoTypography fontWeight="bold" fontSize="md">M1-NTL:</span>
+                <span kendoTypography fontWeight="normal" fontSize="md">2134</span>
+              </div>
+              <div class="k-item">
+                <span kendoTypography fontWeight="bold" fontSize="md">M2-NG:</span>
+                <span kendoTypography fontWeight="normal" fontSize="md">92042</span>
+              </div>
+              <div class="k-item">
+                <span kendoTypography fontWeight="bold" fontSize="md">M2-NTL:</span>
+                <span kendoTypography fontWeight="normal" fontSize="md">9324</span>
+              </div>
+            </div>
+          </div>
+          }
+
+        </div>
+      </ng-template>
+
+      <ng-template kendoDrawerFooterTemplate>
+        <div class="drawer-footer">
+          <button kendoButton fillMode="flat" (click)="drawer.toggle()" aria-label="Toggle Drawer">
+            <kendo-svg-icon [icon]="lockSvg"></kendo-svg-icon>
+            <kendo-svg-icon [icon]="unlockSvg"></kendo-svg-icon>
+            <span kendoTypography fontSize="lg" class="collapse-text">{{ 'COLLAPSE' | translate }}</span>
+          </button>
+        </div>
+      </ng-template>
+    </kendo-drawer>
+  </kendo-drawer-container>
+</div>

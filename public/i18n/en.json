@@ -1,0 +1,32 @@
+{
+  "LOGIN":"Login",
+  "USERNAME_LABEL":"Username",
+  "PASSWORD_LABEL":"Password",
+  "USERNAME_REQUIRED":"Username is required.",
+  "PASSWORD_REQUIRED":"Password is required.",
+  "EMAIL": "Email",
+  "FIRST_NAME": "First Name",
+  "LAST_NAME": "Last Name",
+  "WELCOME_TO_DASHBOARD": "Welcome to the Dashboard!",
+  "SETTINGS_PAGE": "Settings Page",
+  "COMPONENTS_MANAGEMENT": "Components Management for Aircrafts",
+  "LAST_UPDATE": "Last Updated",
+  "CHANGE": "Change",
+  "COLLAPSE": "Collapse",
+  "DASHBOARD": "Dashboard en",
+  "TECHNICAL_BULLETINS": "Technical Bulletins",
+  "ADD": "Add",
+  "STORICO_VALUTAZIONI": "Historical Evaluations",
+  "COMPONENTS": "Components",
+  "AGGIUNGI": "Add",
+  "STORICO": "History",
+  "INSPECTIONS": "Inspections",
+  "HISTORY": "History",
+  "DEADLINES": "Deadlines",
+  "DATABASE": "Database",
+  "COMPONENTS_LIST": "Components list",
+  "INSPECTION_TYPES": "Inspection Types",
+  "DEADLINE_TYPES": "Deadline Types"
+}
+
+

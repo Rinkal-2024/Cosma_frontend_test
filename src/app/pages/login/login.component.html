@@ -1,0 +1,33 @@
+<div class="login-bg">
+  <div class="login-container">
+    <h2>{{'LOGIN' | translate}}</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">{{'USERNAME_LABEL'| translate}}</label>
+        <kendo-textbox id="email" formControlName="username" class="form-control"
+          placeholder="Enter your username"></kendo-textbox>
+        @if (loginForm.get('username')?.invalid && loginForm.get('username')?.touched) {
+        <div>
+          @if (loginForm.get('username')?.hasError('required')) {
+          <small class="text-danger"> {{'USERNAME_REQUIRED' | translate }}</small>
+          }
+        </div>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="password">{{ 'PASSWORD_LABEL' | translate }}</label>
+        <kendo-textbox id="password" formControlName="password" type="password" class="form-control"
+          placeholder="Enter your password"></kendo-textbox>
+        @if (loginForm.get('password')?.invalid && loginForm.get('password')?.touched) {
+        <div>
+          @if (loginForm.get('password')?.hasError('required')) {
+          <small class="text-danger">{{ 'PASSWORD_REQUIRED' | translate }}</small>
+          }
+        </div>
+        }
+      </div>
+      <button kendoButton type="submit" class="btn btn-primary">{{'LOGIN'| translate }}</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,176 @@
+<div class="filter-module">
+  <div class="filter-module-inner">
+    <div class="filter-search-block">
+      <kendo-label [for]="search" text="Search">
+        <kendo-textbox
+          #search
+          placeholder="Search in all columns..."
+        >
+          <ng-template kendoTextBoxPrefixTemplate>
+            <kendo-svg-icon [icon]="allIcons.searchIcon"></kendo-svg-icon>
+          </ng-template>
+          <ng-template kendoTextBoxSuffixTemplate>
+            <kendo-svg-icon [icon]="allIcons.xIcon"></kendo-svg-icon>
+          </ng-template>
+        </kendo-textbox>
+      </kendo-label>
+    </div>
+    <div class="filter-date-range-block">
+      <div class="datepicker-strat">
+        <kendo-label
+          class="k-display-block"
+          [for]="start"
+          text="Start"
+        ></kendo-label>
+        <kendo-datepicker
+          #start
+          [min]="min"
+          [max]="max"
+          [(ngModel)]="valueStart"
+          #dateModel="ngModel"
+          [clearButton]="true"
+          [format]="'dd/MM/yyyy'"
+        >
+      </kendo-datepicker>
+      </div>
+      <div class="datepicker-end">
+        <kendo-label
+          class="k-display-block"
+          [for]="end"
+          text="End"
+        ></kendo-label>
+        <kendo-datepicker
+          #end
+          [min]="min"
+          [max]="max"
+          [(ngModel)]="valueEnd"
+          #dateModel="ngModel"
+          [clearButton]="true"
+          [format]="'dd/MM/yyyy'"
+        >
+      </kendo-datepicker>
+      </div>
+    </div>
+    <div class="status-block">
+      <!-- <kendo-label
+        class="k-display-block"
+        [for]="status"
+        text="Status"
+      >
+      </kendo-label>
+      <kendo-multiselecttree
+        #status
+        [kendoMultiSelectTreeHierarchyBinding]="dataStatus"
+        childrenField="items"
+        [tagMapper]="tagMapper"
+        textField="text"
+        valueField="text"
+      >
+      </kendo-multiselecttree> -->
+      <kendo-label
+        class="k-display-block"
+        [for]="status"
+        text="Status"
+      >
+      </kendo-label>
+      <kendo-multiselect
+        #status
+        [checkboxes]="true"
+        [autoClose]="false"
+        [data]="dataStatus1"
+        [(ngModel)]="statusValue"
+        [tagMapper]="tagMapper"
+        placeholder="Select an option"
+      >
+      <ng-template kendoSuffixTemplate>
+        <button kendoButton type="button" (click)="status.toggle()">
+          <kendo-svg-icon [icon]="allIcons.caretAltDownIcon"></kendo-svg-icon>
+        </button>
+    </ng-template>
+    </kendo-multiselect>
+    </div>
+    <div class="columns-filter-block">
+      <kendo-label
+        class="k-display-block"
+        [for]="columns"
+        text="Columns"
+      >
+      </kendo-label>
+      <kendo-multiselecttree
+        kendoMultiSelectTreeExpandable
+        #columns
+        [kendoMultiSelectTreeHierarchyBinding]="dataColumns"
+        childrenField="columnsItems"
+        [tagMapper]="tagMapper"
+        textField="text"
+        valueField="text"
+        [expandedKeys]="['0']"
+        placeholder="Select an option"
+      >
+      </kendo-multiselecttree>
+    </div>
+    <div class="type-filter-block">
+      <kendo-label [for]="type" text="Type"></kendo-label>
+      <div class="k-form-field-wrap">
+        <kendo-dropdownlist
+          #type
+          [data]="typeData"
+          textField="text"
+          valueField="typeValue"
+          [value]="typeData"
+          (filterChange)="handleFilter($event)"
+          placeholder="Select an option"
+        >
+        </kendo-dropdownlist>
+      </div>
+    </div>
+  </div>
+  <div class="filter-button-row">
+    <button kendoButton themeColor="primary">Crea valutazione</button>
+    <button kendoButton themeColor="base" [svgIcon]="fileTxtIcon">
+      Generate Work Report
+    </button>
+    <div class="pdf-excel-buttons">
+      <button kendoButton kendoGridPDFCommand themeColor="base" [svgIcon]="filePdfIcon">
+        PDF Export
+      </button>
+      <button kendoButton themeColor="base" [svgIcon]="fileExcelIcon">
+        Excel export
+      </button>
+    </div>
+  </div>
+  <!-- <div class="table-container">
+    <kendo-grid
+      [data]="gridData"
+      [sortable]="true"
+      [pageable]="{ pageSizes: true, buttonCount: 5 }"
+      [filterable]="true"
+      [resizable]="true"
+      class="styled-grid"
+    >
+      <kendo-grid-column field="type" title="Type" ></kendo-grid-column>
+      <kendo-grid-column field="status" title="Status" ></kendo-grid-column>
+      <kendo-grid-column field="description" title="Description"></kendo-grid-column>
+      <kendo-grid-column field="date" title="Date" ></kendo-grid-column>
+      <kendo-grid-column field="easa_ad" title="EASA-AD"></kendo-grid-column>
+      <kendo-grid-column field="fa_ad" title="FA-AD"></kendo-grid-column>
+      <kendo-grid-column field="pa" title="PA"></kendo-grid-column>
+      <kendo-grid-column field="sb" title="SB"></kendo-grid-column>
+      <kendo-grid-column field="rapporto" title="Rapporto di lavoro"></kendo-grid-column>
+    </kendo-grid>
+  </div> -->
+
+  <!-- <div className="content">
+    <kendo-grid [data]="gridData" [sortable]="true" [pageable]="true" [filterable]="true">
+      <kendo-grid-column field="type" title="Type" />
+      <kendo-grid-column field="state" title="Stato" />
+      <kendo-grid-column field="description" title="Description" />
+      <kendo-grid-column field="date" title="Date" filter="date" />
+      <kendo-grid-column field="easaAD" title="EASA-AD" />
+      <kendo-grid-column field="faAD" title="FA-AD" />
+      <kendo-grid-column field="pa" title="PA" />
+      <kendo-grid-column field="sb" title="SB" />
+      <kendo-grid-column field="workReport" title="Rapporto di lavoro" />
+    </kendo-grid>
+  </div> -->
+</div>

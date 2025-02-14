@@ -1,0 +1,56 @@
+.login-bg {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--kendo-color-primary);
+}
+.login-container {
+  width: 350px;
+  margin: 150px auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.k-textbox {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.k-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--kendo-color-primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.k-button:hover {
+  background-color: var(--kendo-color-primary);
+  color: white;
+}
+.k-notification-group {
+  max-height: 100%;
+  display: inline-flex;
+  flex-flow: column-reverse wrap;
+  position: fixed;
+  z-index: 1000;
+  gap: var(--kendo-spacing-2, 0.5rem) 0;
+  margin-top: 10px;
+}

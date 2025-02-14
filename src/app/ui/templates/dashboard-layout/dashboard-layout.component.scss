@@ -1,0 +1,33 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+.dashboard-container {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.filter-module {
+  padding: var(--kendo-spacing5);
+  justify-content: space-between;
+  background-color: var(--kendo-color-surface);
+  // border: 1px solid var(--kendo-color-border);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 24px 0px 0px 0px;
+}
