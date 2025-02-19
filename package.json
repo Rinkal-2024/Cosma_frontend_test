@@ -43,6 +43,7 @@
     "@progress/kendo-angular-notification": "17.2.0",
     "@progress/kendo-angular-pdf-export": "17.2.0",
     "@progress/kendo-angular-popup": "17.2.0",
+    "@progress/kendo-angular-spreadsheet": "^17.2.0",
     "@progress/kendo-angular-treelist": "17.2.0",
     "@progress/kendo-angular-typography": "17.2.0",
     "@progress/kendo-drawing": "1.21.2",

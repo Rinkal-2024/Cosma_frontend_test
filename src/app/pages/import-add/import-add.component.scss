@@ -1,0 +1,68 @@
+.import-container {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.file-upload {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+
+.drop-files {
+  color: gray;
+  font-size: 14px;
+}
+
+.spreadsheet {
+  margin-top: 15px;
+  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 100%; 
+  overflow: auto;
+}
+
+.single-add {
+  margin-top: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.import-btn {
+  background-color: #d9534f;
+  color: white;
+}
+
+.cancel-btn {
+  background: #f5f5f5;
+  color: #333;
+}
+kendo-spreadsheet .k-spreadsheet-header {
+  display: none !important;
+}
+
+kendo-spreadsheet .k-spreadsheet-action-bar {
+  display: none !important;
+}
+.k-spreadsheet-sheets-menu{
+  display: none !important;
+
+}
+
+
